@@ -3,3 +3,4 @@
 
 zookeeper_version: latest
 docker_command: run
+data_dir: /data

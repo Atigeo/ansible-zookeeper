@@ -1,10 +1,6 @@
 ---
 # tasks file for ansible-zookeeper
 
-- name: Get PWD
-  local_action: shell pwd
-  register: pwd
-
 - name: Launch zookeeper
   docker:
     image: xpatterns/zookeeper:{{ zookeeper_version }}
@@ -14,6 +10,6 @@
     ports:
       - "5181:5181"
     volumes:
-      - "{{ pwd.stdout }}/zookeeper:/var/lib/zookeeper/"
+      - "{{ data_dir }}/zookeeper:/var/lib/zookeeper/"
     restart_policy: always
     state: started
