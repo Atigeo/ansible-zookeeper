@@ -2,5 +2,5 @@
 # vars file for ansible-zookeeper
 
 zookeeper_version: latest
-docker_command: run
+docker_command: init
 data_dir: /data
