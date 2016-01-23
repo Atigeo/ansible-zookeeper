@@ -8,7 +8,7 @@
     command: /usr/bin/run.sh {{ docker_command }}
     hostname: "zookeeper"
     ports:
-      - "5181:5181"
+      - "2181:2181"
     volumes:
       - "{{ data_dir }}/zookeeper:/var/lib/zookeeper/"
     restart_policy: always
