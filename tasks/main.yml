@@ -6,10 +6,9 @@
     image: xpatterns/zookeeper:{{ zookeeper_version }}
     name: zookeeper
     command: /usr/bin/run.sh
-    net: host
-#    hostname: "zookeeper"
-#    ports:
-#      - "2181:2181"
+    hostname: "zookeeper"
+    ports:
+      - "2181:2181"
     volumes:
       - "{{ data_dir }}/zookeeper:/var/lib/zookeeper/"
     restart_policy: always
